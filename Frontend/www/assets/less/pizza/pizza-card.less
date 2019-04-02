@@ -1,10 +1,117 @@
 .pizza-card {
+  min-width: 200px;
+  margin: auto;
+
   img {
-    max-width: 250px;
+    width: 100%;
+    height: 300px;
+    object-fit: scale-down;
   }
 
   h3 {
     color: @mainColor;
     background-color: lighten(@mainColor, 45%);
+  }
+
+  height: 100%;
+  padding-bottom: 15px;
+  position: relative;
+
+  .card-wrapper {
+    height: 100%;
+    border: 1px solid @pageBorderColor;
+  }
+
+  .pizza-type {
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+    color: #a3a0a0;
+  }
+
+  .pizza-options {
+    padding-bottom: 10px;
+
+    .row {
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+
+}
+
+.pizza-size-icon, .pizza-weight-icon {
+  position: relative;
+  margin-left: 12px;
+}
+
+.pizza-weight-icon:before, .pizza-size-icon:before {
+  content: " ";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: -2px;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  background-repeat: round;
+}
+
+.pizza-size-icon:before {
+  background-image: url(../images/size-icon.svg);
+}
+
+.pizza-weight-icon:before {
+  background-image: url(../images/weight.svg);
+}
+
+.pizza-prise {
+  font-size: 1.8em;
+  line-height: 0.8;
+}
+
+.tag-new[class*='pizza-card'], .tag-popular[class*='pizza-card'] {
+  position: relative;
+}
+
+.tag-new[class*='pizza-card']:before, .tag-popular[class*='pizza-card']:before {
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  padding: 0 5px;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.tag-new[class*='pizza-card']:before {
+  content: "Нова";
+  background-color: #d9534f;
+}
+
+.tag-popular[class*='pizza-card']:before {
+  content: "Популярна";
+  background-color: #5cb85c;
+}
+
+@media (max-width: 992px) {
+  .pizza-card {
+    img {
+      height: 250px;
+    }
+  }
+}
+
+@media (max-width: 564px) {
+  .pizza-card {
+    max-width: 300px;
+
+    img {
+      height: 300px;
+    }
   }
 }
