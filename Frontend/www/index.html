@@ -15,7 +15,7 @@
 
 </head>
 <body>
-<div id="cart">
+<div id="top-nav">
     <div class="row">
         <div class="top-menu">
             <div class="flex-ordered-content">
@@ -31,6 +31,7 @@
                         <span class="control-label">(044) 222 5 222</span>
                         <span class="smaller-text dis-small">24 &frasl; 7</span>
                         <span class="dis-medium">Безкоштовна доставка піци</span>
+                        <button class="btn btn-warning">Ввійти</button>
                     </div>
 
                     <div class="top-bordered bold-text">
@@ -160,32 +161,14 @@
     <div class="right-panel-wrapper">
         <div class="order-info">
             Замовлення
-            <span class="orders-counter">3</span>
+            <span class="orders-counter">0</span>
             <span class="clear-order">Очистити замовлення</span>
         </div>
-        <div class="all-orders">
-            <div class="order-cell">
-                <img src="assets/images/pizza_2.jpg" alt="">
-                <h6>BBQ (Велика)</h6>
-                <div class="order-text">
-                    <span class="pizza-size-icon">40</span><span class="pizza-weight-icon">840</span>
-                </div>
-                <div class="price-box">
-                    <span class="bold-text">199грн</span>
-                    <span>
-                        <span class="reduce-btn">-</span>
-                        <span class="counter bold-text">1</span>
-                        <span class="add-btn">+</span>
-                    </span>
-                    <span class="refuse-btn">&Cross;</span>
-
-                </div>
-            </div>
-
+        <div class="all-orders" id="cart">
         </div>
         <div class="order-controller bold-text">
             <div class="order-stat">
-                <span>Сума замовлення</span><span>924 грн</span>
+                <span>Сума замовлення</span><span><span id="total_prise">924</span> грн</span>
             </div>
             <div class="order-btn-wrapper">
                 <button class="btn btn-warning" id="order-btn">Замовити</button>
@@ -215,6 +198,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <!--Own JavaScript -->
-<!--<script type="text/javascript" src="assets/js/main.js"></script>-->
+<script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>
