@@ -3,7 +3,8 @@
  */
 const Templates = require('../Templates');
 const PizzaCart = require('./PizzaCart');
-const Pizza_List = require('../Pizza_List');
+const API = require('../API.js');
+
 
 const PizzaTypes = {
     "all": "усі",
@@ -14,7 +15,7 @@ const PizzaTypes = {
     "vega": "вега"
 };
 
-function showFilters() {
+function showFilters(Pizza_List) {
     let filterBlock = $("<div></div>").attr({
         "class": "filter-block"
     });
@@ -34,7 +35,7 @@ function showFilters() {
             "class": "one-filter-item"
         });
         item.click(function () {
-            filterPizza(filterValue);
+            filterPizza(filterValue, Pizza_List);
             $(".filters-inline-wrapper .current-filter").removeClass("current-filter");
             $(this).addClass("current-filter");
             if (filterName.charAt(0) === "з")
@@ -86,7 +87,7 @@ function showPizzaList(list) {
     list.forEach(showOnePizza);
 }
 
-function filterPizza(filter) {
+function filterPizza(filter, Pizza_List) {
     if (filter === "all") {
         showPizzaList(Pizza_List);
         $(".filters-counter").text(Pizza_List.length);
@@ -115,8 +116,14 @@ function filterPizza(filter) {
 
 function initialiseMenu() {
     //Показуємо усі піци
-    showFilters();
-    showPizzaList(Pizza_List);
+    API.getPizzaList(function (err, res) {
+        if (err)
+            throw err;
+        //  console.log(res);
+
+        showFilters(res);
+        showPizzaList(res);
+    });
 }
 
 exports.filterPizza = filterPizza;

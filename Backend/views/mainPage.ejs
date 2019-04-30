@@ -1,0 +1,137 @@
+<% include common/header.ejs %>
+<div class="container-fluid main-content">
+
+
+    <div class="row" id="pizza_list">
+        <div class="col-md-6 col-lg-4">
+            <div class="thumbnail pizza-card tag-new">
+                <div class="card-wrapper">
+                    <img src="assets/images/pizza_1.jpg" alt="">
+
+                    <div class="caption"><h3>Міксовий поло</h3>
+                        <p class="pizza-type">М’ясна піца</p>
+                        <p>Вітчина, куриця копчена, сир моцарелла, ананаси, кукурудза, петрушка, соус томатний</p>
+                        <div class="pizza-options">
+                            <div class="row">
+                                <div class="col-sm-6">
+
+                                    <span class="pizza-size-icon">30</span>
+                                    <p>
+                                        <span class="pizza-weight-icon">370</span>
+                                    </p>
+                                    <span class="pizza-prise">99</span>
+                                    <span>грн.</span>
+                                    <button class="btn btn-warning">Купити</button>
+                                </div>
+                                <div class="col-sm-6">
+                                    <span class="pizza-size-icon">40</span>
+                                    <p>
+                                        <span class="pizza-weight-icon">660</span>
+                                    </p>
+                                    <span class="pizza-prise">169</span>
+                                    <span>грн.</span>
+                                    <button class="btn btn-warning">Купити</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="thumbnail pizza-card tag-popular">
+                <div class="card-wrapper">
+                    <img src="assets/images/pizza_2.jpg" alt="">
+
+                    <div class="caption"><h3>BBQ</h3>
+                        <p class="pizza-type">М’ясна піца</p>
+                        <p>Мисливські ковбаски, ковбаски папероні, шинка, сир домашній, шампінйони, петрушка,
+                            оливки</p>
+                        <div class="pizza-options">
+                            <div class="row">
+                                <div class="col-sm-6">
+
+                                    <span class="pizza-size-icon">30</span>
+                                    <p>
+                                        <span class="pizza-weight-icon">460</span>
+                                    </p>
+                                    <span class="pizza-prise">139</span>
+                                    <span>грн.</span>
+                                    <button class="btn btn-warning">Купити</button>
+                                </div>
+                                <div class="col-sm-6">
+                                    <span class="pizza-size-icon">40</span>
+                                    <p>
+                                        <span class="pizza-weight-icon">840</span>
+                                    </p>
+                                    <span class="pizza-prise">199</span>
+                                    <span>грн.</span>
+                                    <button class="btn btn-warning">Купити</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="thumbnail pizza-card">
+                <div class="card-wrapper">
+                    <img src="assets/images/pizza_3.jpg" alt="">
+
+                    <div class="caption"><h3>Маргарита</h3>
+                        <p class="pizza-type">Вега піца</p>
+                        <p>Сир моцарелла, сир домашній, помідори, базилік, оливкова олія, соус томатний
+                        </p>
+                        <div class="pizza-options">
+                            <div class="row">
+                                <div class="col-sm-6">
+
+                                    <span class="pizza-size-icon">30</span>
+                                    <p>
+                                        <span class="pizza-weight-icon">370</span>
+                                    </p>
+                                    <span class="pizza-prise">99</span>
+                                    <span>грн.</span>
+                                    <button class="btn btn-warning">Купити</button>
+                                </div>
+                                <div class="col-sm-6">
+                                    <span class="pizza-size-icon">40</span>
+                                    <p>
+                                        <span class="pizza-weight-icon">660</span>
+                                    </p>
+                                    <span class="pizza-prise">99</span>
+                                    <span>грн.</span>
+                                    <button class="btn btn-warning">Купити</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="right-panel">
+    <div class="right-panel-wrapper">
+        <div class="order-info">
+            Замовлення
+            <span class="orders-counter">0</span>
+            <span class="clear-order">Очистити замовлення</span>
+        </div>
+        <div class="all-orders" id="cart">
+        </div>
+        <div class="order-controller bold-text">
+            <div class="order-stat">
+                <span>Сума замовлення</span><span><span id="total_prise">924</span> грн</span>
+            </div>
+            <div class="order-btn-wrapper">
+                <a href="/order.html"><button class="btn btn-warning">Замовити</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include common/footer.ejs %>

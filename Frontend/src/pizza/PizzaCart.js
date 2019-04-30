@@ -3,6 +3,7 @@
  */
 const Storage = localStorage;
 const Templates = require('../Templates');
+const API = require('../API.js');
 
 //Перелік розмірів піци
 const PizzaSize = {
@@ -71,7 +72,6 @@ function initialiseCart() {
         updateCart();
     });
     $(document).on("click", "span, button", function () {
-        console.log($(".orders-counter").text());
         if ($(".orders-counter").text() == "0") {
             $("#order-btn").attr({
                 "disabled": "true"

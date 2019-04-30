@@ -1,0 +1,28 @@
+<% include common/header.ejs %>
+
+<div class="right-panel">
+    <div class="right-panel-wrapper">
+        <div class="order-info">
+            Замовлення
+            <span class="orders-counter">0</span>
+            <span class="clear-order">Очистити замовлення</span>
+        </div>
+        <div class="all-orders" id="cart">
+        </div>
+        <div class="order-controller bold-text">
+            <div class="order-stat">
+                <span>Сума замовлення</span><span><span id="total_prise">924</span> грн</span>
+            </div>
+            <div class="order-btn-wrapper">
+                <button class="btn btn-warning" id="order-btn">Замовити</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .not-order-page {
+        display: none;
+    }
+</style>
+<% include common/footer.ejs %>
