@@ -12,7 +12,8 @@ $(document).ready(function () {
     PizzaCart.initialiseCart();
     if ($("title").text() === "Вибір Піци - Pizza")
         PizzaMenu.initialiseMenu();
-    if ($("title").text() === "Замовлення Піци - Pizza")
+    if ($("title").text() === "Замовлення Піци - Pizza") {
+        OrderData.initialiseMaps();
         OrderData.checkData();
-
+    }
 });

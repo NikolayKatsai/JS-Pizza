@@ -46,8 +46,11 @@
             <div class="col-lg-5 order-summary">
                 <div class=" bs-callout bs-callout-warning">
                     <h4>Інформація про замовлення</h4>
-                    <p class="order-summery-time"><b>Приблизний час доставки</b>: 11 мин.</p>
-                    <p class="order-summery-adress"><b>Адреса доставки:</b> вулиця Кирилівська, 86, Київ, Украина, 02000
+                    <p class="order-summery-time"><b>Приблизний час доставки: </b> <span
+                                class="order-summery-time-val"></span>
+                    </p>
+                    <p class="order-summery-adress"><b>Адреса доставки: </b><span
+                                class="order-summery-adress-val"></span>
                     </p>
                 </div>
             </div>
@@ -64,6 +67,7 @@
             </div>
         </div>
     </div>
+    <div id="google-maps" class="google-maps"></div>
 </div>
 <div class="right-panel">
     <div class="right-panel-wrapper">
@@ -89,6 +93,27 @@
         </div>
     </div>
 </div>
+<script>
+    var map;
+
+    function initMap() {
+//Тут починаємо працювати з картою
+        var mapProp = {
+            center: {lat: 50.464379, lng: 30.519131},
+            // center: new google.maps.LatLng(50.464379, 30.519131),
+            zoom: 13
+        };
+        var html_element = document.getElementById("google-maps");
+        map = new google.maps.Map(html_element, mapProp);
+//Карта створена і показана
+
+    }
+</script>
+
+<script type="text/javascript"
+        src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBu8EfHXfhweZE-W19Uo2d_UIFrmKvOeMo&callback=initMap">
+</script>
+
 
 <style>
     .not-order-page {

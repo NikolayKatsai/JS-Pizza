@@ -55,6 +55,12 @@ function removeFromCart(order) {
     updateCart();
 }
 
+function clearCart() {
+    while (Cart.length != 0)
+        Cart.pop();
+    updateCart();
+}
+
 function initialiseCart() {
     //Фукнція віпрацьвуватиме при завантаженні сторінки
     //Зчитати вміст корзини який збережено в Local Storage то показати його
@@ -142,7 +148,7 @@ function updateCart() {
 
 exports.removeFromCart = removeFromCart;
 exports.addToCart = addToCart;
-
+exports.clearCart = clearCart;
 exports.getPizzaInCart = getPizzaInCart;
 exports.initialiseCart = initialiseCart;
 
