@@ -4,11 +4,15 @@
 
 $(document).ready(function () {
     //This code will execute when the page is ready
-    let PizzaMenu = require('./pizza/PizzaMenu');
-    let PizzaCart = require('./pizza/PizzaCart');
+    const PizzaMenu = require('./pizza/PizzaMenu');
+    const PizzaCart = require('./pizza/PizzaCart');
+    const OrderData = require('./pizza/OrderData');
     //var Pizza_List = require('./Pizza_List');
 
     PizzaCart.initialiseCart();
-    PizzaMenu.initialiseMenu();
+    if ($("title").text() === "Вибір Піци - Pizza")
+        PizzaMenu.initialiseMenu();
+    if ($("title").text() === "Замовлення Піци - Pizza")
+        OrderData.checkData();
 
 });

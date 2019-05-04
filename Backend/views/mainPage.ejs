@@ -128,10 +128,19 @@
                 <span>Сума замовлення</span><span><span id="total_prise">924</span> грн</span>
             </div>
             <div class="order-btn-wrapper">
-                <a href="/order.html"><button class="btn btn-warning">Замовити</button></a>
+                <a href="/order.html">
+                    <button class="btn btn-warning not-order-page" id="order-btn">Замовити</button>
+                </a>
+                <a href="/">
+                    <button class="btn btn-warning not-main-page">Редагувати замовлення</button>
+                </a>
             </div>
         </div>
     </div>
 </div>
-
+<style>
+    .not-main-page {
+        display: none;
+    }
+</style>
 <% include common/footer.ejs %>

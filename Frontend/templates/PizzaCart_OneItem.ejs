@@ -22,11 +22,15 @@
     <div class="price-box">
         <span class="bold-text"><%= price %>грн</span>
         <span class="not-order-page">
-                        <span class="reduce-btn">-</span>
+                        <span class="reduce-btn not-order-page">-</span>
                         <span class="counter bold-text"><%= quantity %></span>
-                        <span class="add-btn">+</span>
+                        <span class="add-btn not-order-page">+</span>
+                        <span class="refuse-btn">&Cross;</span>
                     </span>
-        <span class="refuse-btn">&Cross;</span>
+        <span class="not-main-page">
+            <span>кількість:</span>
+            <span class="counter bold-text"><%= quantity %></span>
+        </span>
 
     </div>
 </div>

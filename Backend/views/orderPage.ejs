@@ -1,11 +1,76 @@
 <% include common/header.ejs %>
-
+<div class="container-fluid main-content">
+    <div class="contact-form-1">
+        <div class="form-description-1">
+            1. Контактні дані
+        </div>
+        <div class="row">
+            <div class="col-lg-7">
+                <form class="form-horizontal">
+                    <div class="form-group name-group">
+                        <div class="row">
+                            <label class="col-sm-2 control-label">Ім’я</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" id="inputName" placeholder="Ім’я Фамілія">
+                            </div>
+                        </div>
+                        <span class="name-help-block" style="display:none">
+                                Введіть тільки власне ім’я, без цифр
+                            </span>
+                    </div>
+                    <div class="form-group phone-group">
+                        <div class="row">
+                            <label class="col-sm-2 control-label">Телефон</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" id="inputPhone" placeholder="+380994010999">
+                            </div>
+                        </div>
+                        <span class="phone-help-block" style="display:none">
+                                Введіть номер телефону у форматі +380 або почніть з 0
+                            </span>
+                    </div>
+                    <div class="form-group address-group">
+                        <div class="row">
+                            <label class="col-sm-2 control-label">Адреса</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" id="inputAddress"
+                                       placeholder="Київ, вул. Спаська, 2">
+                            </div>
+                        </div>
+                        <span class="address-help-block" style="display:none">
+                                Оберіть адресу доставки піци
+                            </span>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-5 order-summary">
+                <div class=" bs-callout bs-callout-warning">
+                    <h4>Інформація про замовлення</h4>
+                    <p class="order-summery-time"><b>Приблизний час доставки</b>: 11 мин.</p>
+                    <p class="order-summery-adress"><b>Адреса доставки:</b> вулиця Кирилівська, 86, Київ, Украина, 02000
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row next-step-wrap">
+            <div class="form-group">
+                <div class="next-step-width">
+                    <button type="button" class="btn btn-warning btn-block next-step-button" id="buy">
+                        Далі
+                        <i class="glyphicon glyphicon-chevron-right icon-white">
+                        </i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="right-panel">
     <div class="right-panel-wrapper">
         <div class="order-info">
             Замовлення
             <span class="orders-counter">0</span>
-            <span class="clear-order">Очистити замовлення</span>
+            <span class="clear-order not-order-page">Очистити замовлення</span>
         </div>
         <div class="all-orders" id="cart">
         </div>
@@ -14,7 +79,12 @@
                 <span>Сума замовлення</span><span><span id="total_prise">924</span> грн</span>
             </div>
             <div class="order-btn-wrapper">
-                <button class="btn btn-warning" id="order-btn">Замовити</button>
+                <a href="/order.html">
+                    <button class="btn btn-warning not-order-page" id="order-btn">Замовити</button>
+                </a>
+                <a href="/">
+                    <button class="btn btn-warning not-main-page">Редагувати замовлення</button>
+                </a>
             </div>
         </div>
     </div>

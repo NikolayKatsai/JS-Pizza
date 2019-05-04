@@ -1,6 +1,3 @@
-/**
- * Created by chaika on 02.02.16.
- */
 const Storage = localStorage;
 const Templates = require('../Templates');
 const API = require('../API.js');

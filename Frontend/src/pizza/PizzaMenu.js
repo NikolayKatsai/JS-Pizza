@@ -1,6 +1,3 @@
-/**
- * Created by chaika on 02.02.16.
- */
 const Templates = require('../Templates');
 const PizzaCart = require('./PizzaCart');
 const API = require('../API.js');
